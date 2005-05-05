@@ -1,0 +1,34 @@
+(* ---------------------------------------------------------------------- *)
+(* DEFINITION MODULE SymbolTable.                                         *)
+(*                                                                        *)
+(*  USEAGE : This module builds a symbol table containing DECLARATIONS    *)
+(*           together with details of their TYPE and SCOPE.               *)
+(*                                                                        *)
+(*  COPYRIGHT : (C) The Free Modula-2 Group 2005                          *)
+(*  AUTHOR    : ScotaSys        DATE WRITTEN    05/05/2005                *)
+(* ---------------------------------------------------------------------- *)
+
+DEFINITION MODULE SymbolTable;
+
+TYPE
+    Type;		    (* Declaration's data type             *)
+    Declaration;	(* List of declarations within a scope *)
+    Scope;		    (* Scope of declartions                *)
+
+(* ProcedureName --------------------------------------------------------
+    DESCRIPTION    : Describe what this procedure does on these few lines 
+                     here. Please keep it short and simple, unless you 
+                     really need to put a lot of information here.
+
+    PRE-CONDITION  : Describe the procedure's inputs, if any, here.
+    POST-CONDITION : Describe the procedure's outputs here.
+   ---------------------------------------------------------------------- *)
+
+END SymbolTable.
+
+(* ---------------------------------------------------------------------
+       This software and its source code is released under the 
+                   GNU General Public Licence
+        Copyright (C) 1989, 1991 Free Software Foundation, Inc.
+         59 Temple Place, Suite 330, Boston, MA 02111-1307 USA
+   -------------------------------------------------------------------- *)
