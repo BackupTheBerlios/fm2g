@@ -29,7 +29,7 @@ TYPE
                          type  : Type;		 (* Data type                *)
                          Value : LONGINT;	 (* Data value               *)
                          Next  : Declaration;(* Next declaration in list *)
-		      END;
+                      END;
 
     ScopeList = RECORD
 		            First : Scope;		    (* Pointer to higher scope *)
@@ -38,8 +38,8 @@ TYPE
                 END;
 
 (* ProcedureName --------------------------------------------------------
-    DESCRIPTION    : Describe what this procedure does on these few lines 
-                     here. Please keep it short and simple, unless you 
+    DESCRIPTION    : Describe what this procedure does on these few lines
+                     here. Please keep it short and simple, unless you
                      really need to put a lot of information here.
 
     PRE-CONDITION  : Describe the procedure's inputs, if any, here.
@@ -49,7 +49,7 @@ TYPE
 END SymbolTable.
 
 (* ---------------------------------------------------------------------
-       This software and its source code is released under the 
+       This software and its source code is released under the
                    GNU General Public Licence
         Copyright (C) 1989, 1991 Free Software Foundation, Inc.
          59 Temple Place, Suite 330, Boston, MA 02111-1307 USA

@@ -1,15 +1,17 @@
 (* ---------------------------------------------------------------------- *)
-    IMPLEMENTATION MODULE ModuleName.
-
-    USEAGE : This is the standard layout for The Free Modula-2 Group and
-             you can describe this module does on these few lines here.
-
-    COPYRIGHT : (C) The Free Modula-2 Group 2005
-    AUTHOR : ScotaSys		DATE WRITTEN 04/05/2005
-   ( Original Author Only -  the first programmer to create the  module)
+(*  IMPLEMENTATION MODULE ModuleName.                                     *)
+(*                                                                        *)
+(*  USEAGE : This is the standard layout for The Free Modula-2 Group and  *)
+(*           you can describe this module does on these few lines here.   *)
+(*                                                                        *)
+(*  COPYRIGHT : (C) The Free Modula-2 Group 2005                          *)
+(*  AUTHOR : ScotaSys		DATE WRITTEN 04/05/2005                       *)
+(* ( Original Author Only -  the first programmer to create the  module)  *)
 (* ---------------------------------------------------------------------- *)
 
 MODULE ModuleName;
+
+FROM   aModule    IMPORT    aProcedure;
 
 VAR
     aVaribale : SomeType;
