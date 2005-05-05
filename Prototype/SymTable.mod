@@ -4,8 +4,8 @@
 (*  USEAGE : This module builds a symbol table containing DECLARATIONS    *)
 (*           together with details of their TYPE and SCOPE.               *)
 (*                                                                        *)
-(*  COPYRIGHT : (C) The Free Modula-2 Group 2005                          *)
-(*  AUTHOR : ScotaSys		DATE WRITTEN 05/05/2005                       *)
+(*  COPYRIGHT    : (C) The Free Modula-2 Group 2005                       *)
+(*  AUTHOR       : ScotaSys		DATE WRITTEN 05/05/2005                 *)
 (* ---------------------------------------------------------------------- *)
 
 MODULE SymbolTable;
@@ -16,25 +16,24 @@ TYPE
     Scope       = POINTER TO ScopeList;
 
     TypeDetails = RECORD
-		              Form   : INTEGER;		(* Record, array, etc          *)
-		              Length : INTEGER;		(* Array size                  *)
-		              Fields : Declaration;	(* Record fields               *)
-	    	          Base   : Type;        (* Array type - INTEGER, REAL  *)
+		             Form   : INTEGER;        (* Record, array, etc  *)
+		             Length : INTEGER;        (* Array size          *)
+		             Fields : Declaration;	  (* Record fields       *)
+	    	             Base   : Type;           (* INTEGER, REAL       *)
                   END;
 
     DeclarationList = RECORD
-                         Name  : INTEGER;	 (* Declaration name         *)
-                         Ident : INTEGER;    (*                          *)
+                         Name  : ARRAY [0..32]OF CHAR;(* Declaration name *)
                          Class : INTEGER;    (* Variable, const, etc     *)
-                         type  : Type;		 (* Data type                *)
-                         Value : LONGINT;	 (* Data value               *)
+                         type  : Type;       (* Data type                *)
+                         Value : LONGINT;    (* Data value               *)
                          Next  : Declaration;(* Next declaration in list *)
                       END;
 
     ScopeList = RECORD
-		            First : Scope;		    (* Pointer to higher scope *)
+		            First : Scope;          (* Pointer to higher scope *)
 		            Item  : Declaration;    (* Pointer to declarations *)
-                    Next  : Scope;		    (* Pointer to lower scope  *)
+                      Next  : Scope;          (* Pointer to lower scope  *)
                 END;
 
 (* ProcedureName --------------------------------------------------------

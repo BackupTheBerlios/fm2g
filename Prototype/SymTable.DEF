@@ -12,8 +12,8 @@ DEFINITION MODULE SymbolTable;
 
 TYPE
     Type;		    (* Declaration's data type             *)
-    Declaration;	(* List of declarations within a scope *)
-    Scope;		    (* Scope of declartions                *)
+    Declaration;    (* List of declarations within a scope *)
+    Scope;	    (* Scope of declartions                *)
 
 (* ProcedureName --------------------------------------------------------
     DESCRIPTION    : Describe what this procedure does on these few lines 
