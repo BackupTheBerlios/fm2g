@@ -11,6 +11,13 @@
 MODULE SymbolTable;
 
 TYPE
+    SymTable = Pointer TO SymbolTable;
+    SymbolTable = RECORD
+                      Typ : Type;
+                      Dec : Declaration;
+                      Scp : Scope;
+                  END;
+
     Type        = POINTER TO TypeDetails;
     Declaration = POINTER TO DeclarationList;
     Scope       = POINTER TO ScopeList;
@@ -23,7 +30,7 @@ TYPE
                   END;
 
     DeclarationList = RECORD
-                         Name  : ARRAY [0..32]OF CHAR;(* Declaration name *)
+                         Name  : ARRAY [0..64]OF CHAR;(* Declaration name *)
                          Class : INTEGER;    (* Variable, const, etc     *)
                          type  : Type;       (* Data type                *)
                          Value : LONGINT;    (* Data value               *)
@@ -31,10 +38,15 @@ TYPE
                       END;
 
     ScopeList = RECORD
-		            First : Scope;          (* Pointer to higher scope *)
 		            Item  : Declaration;    (* Pointer to declarations *)
                       Next  : Scope;          (* Pointer to lower scope  *)
                 END;
+
+    TopScope    : Scope;                    (* Top scope of declarations *)
+    BottomScope : Scope;                    (* Tail end of scope list    *)
+    
+    HeadDeclaration : Declaration;           (* Head of declaration list *)
+    TailDeclaration : Declaration;           (* Tail of declaration list *)
 
 (* ProcedureName --------------------------------------------------------
     DESCRIPTION    : Describe what this procedure does on these few lines
@@ -44,6 +56,23 @@ TYPE
     PRE-CONDITION  : Describe the procedure's inputs, if any, here.
     POST-CONDITION : Describe the procedure's outputs here.
    ------------------------------------------------------------------- *)
+
+PROCEDURE CreateScope(): Scope;
+BEGIN
+END CreateScope;
+
+PROCEDURE AddScope(Scope): Scope;
+BEGIN
+END AddScope;
+
+PROCEDURE NextScope(Scope): Scope;
+BEGIN
+END NextScope;
+
+PROCEDURE CurrentScope(Scope): Scope;
+BEGIN
+END CurrentScope;
+
 
 END SymbolTable.
 

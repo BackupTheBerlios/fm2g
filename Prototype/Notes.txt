@@ -1,1 +1,1 @@
-Notes
+These are the Prototype compiler's files.
