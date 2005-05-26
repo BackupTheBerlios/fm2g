@@ -1,0 +1,24 @@
+Coco/R - Compiler-Compiler V1.53
+Released by Pat Terry 17 September 2002
+Source file: modula.atg
+
+Grammar Tests:
+
+Deletable symbols:        -- none --
+Undefined nonterminals:   -- none --
+Unreachable nonterminals: -- none --
+Circular derivations:     -- none --
+Underivable nonterminals: -- none --
+LL(1) conditions:         --  ok  --
+
+Statistics:
+
+  nr of terminals:        66 (limit   400)
+  nr of non-terminals:    45 (limit   210)
+  nr of pragmas:           0 (limit   434)
+  nr of symbolnodes:     111 (limit   500)
+  nr of graphnodes:      327 (limit  1500)
+  nr of conditionsets:     3 (limit   100)
+  nr of charactersets:    14 (limit   250)
+
+
